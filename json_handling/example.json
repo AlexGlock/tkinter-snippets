@@ -1,0 +1,20 @@
+{
+    "__type__": "Obj",
+    "att1": "something",
+    "att2": "some more",
+    "att3": "last",
+    "list": [
+        {
+            "__type__": "nestedObj",
+            "att1": " ... ",
+            "att2": " ... ",
+            "att3": " ... "
+        },
+        {
+            "__type__": "nestedObj",
+            "att1": " ... ",
+            "att2": " ... ",
+            "att3": " ... "
+        }
+    ]
+}
