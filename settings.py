@@ -12,6 +12,7 @@ import os
 BASE_DIR = pathlib.Path(__file__).parent.resolve()
 
 APP_TITLE = "TK TEMPLATE"
+SCPI_DEVICE_ID = "12345"
 
 # font styles
 TITLE_FONT = "Helvetica 14"

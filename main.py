@@ -37,14 +37,12 @@ class MainApplication(tk.Tk):
     def connect_scpi(self):
         """connect_scpi This function connects the scpi devices"""
         device_list = self.scpi_manager.list_resources()
-        MY_DEVICE_ID = '123456'
 
         for device_string in device_list:
-            if MY_DEVICE_ID in device_string:
+            if settings.SCPI_DEVICE_ID in device_string:
                 self.scpi_device = self.scpi_manager.open_resource(
                     device_string, read_termination="\n"
                 )
-
 
     def disconnect_scpi(self):
         """disconnect_scpi this function disconnects the scpi devices safely"""
@@ -53,7 +51,7 @@ class MainApplication(tk.Tk):
             self.scpi_device.close()
 
     def configure_gui(self):
-        self.title("MY TK APP")
+        self.title(settings.APP_TITLE)
         # fullscreen
         width = self.winfo_screenwidth()
         height = self.winfo_screenheight()
